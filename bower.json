@@ -14,8 +14,8 @@
   ],
   "dependencies": {
     "angular": "^1.5.8",
-    "color-themes-for-google-code-prettify": "*",
-    "code-prettify": "https://github.com/google/code-prettify.git"
+    "code-prettify": "https://github.com/google/code-prettify.git",
+    "color-themes-for-google-code-prettify": "*"
   },
   "overrides": {
     "code-prettify": {
