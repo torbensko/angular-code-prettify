@@ -5,7 +5,6 @@ angular.module('sko.prettify', [])
 		return {
 			restrict: 'C',
 			link: function(scope, element) {
-				console.log('what');
     		prettyPrint();
 			}
 		}
@@ -16,7 +15,6 @@ angular.module('sko.prettify.pre', [])
 		return {
 			restrict: 'E',
 			link: function(scope, element) {
-				console.log('hey');
 				element.addClass('prettyprint');
     		prettyPrint();
 			}
