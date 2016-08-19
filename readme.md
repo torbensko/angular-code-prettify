@@ -22,13 +22,19 @@ An Angular directive for prettifying your code using the Google Code Prettifier.
   }
   ```
 
-- Add the module `sko.prittify`.
-- Place your code in `pre` tag:
+- Add the module `sko.prittify` and place your code in `pre` tag with the cass `prettyprint`:
 	```
 	<pre class="prettyprint">
 		console.log('hello world');
 	</pre>
 	```
+  
+  Alternatively, add the module `sko.prittify.pre` and place your code in `pre` tag:
+  ```
+  <pre>
+    console.log('hello world');
+  </pre>
+  ```
 
 ## Development
 

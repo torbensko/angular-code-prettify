@@ -5,7 +5,19 @@ angular.module('sko.prettify', [])
 		return {
 			restrict: 'C',
 			link: function(scope, element) {
-				console.log('pretty');
+				console.log('what');
+    		prettyPrint();
+			}
+		}
+	});
+
+angular.module('sko.prettify.pre', [])
+	.directive('pre', function() {
+		return {
+			restrict: 'E',
+			link: function(scope, element) {
+				console.log('hey');
+				element.addClass('prettyprint');
     		prettyPrint();
 			}
 		}

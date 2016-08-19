@@ -1,4 +1,4 @@
-<html ng-app="DemoApp">
+<html>
 <head>
 	<title></title>
 	<!-- bower:css -->
@@ -7,11 +7,21 @@
 	<!-- endbower -->
 </head>
 <body>
+	
+	<!-- 
+	<div ng-app="DemoApp">
+		<pre class="prettyprint">
+			var foo = 10;
+			console.log(foo); // output: 10
+		</pre>
+	</div> -->
 
-	<pre class="prettyprint">
-		var foo = 10;
-		console.log(foo); // output: 10
-	</pre><!-- .prettyprint -->
+	<div ng-app="DemoPreApp">
+		<pre>
+			var foo = 10;
+			console.log(foo); // output: 10
+		</pre><!-- .prettyprint -->
+	</div>
 
 	<!-- bower:js -->
 	<script src="bower_components/angular/angular.js"></script>
@@ -21,6 +31,7 @@
 
 	<script>
 		angular.module('DemoApp', ['sko.prettify']);
+		angular.module('DemoPreApp', ['sko.prettify.pre']);
 	</script>
 </body>
 </html>
