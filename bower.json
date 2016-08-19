@@ -1,0 +1,33 @@
+{
+  "name": "angular-google-code-prettify",
+  "authors": [
+    "Torben Sko <torben.sko@gmail.com>"
+  ],
+  "description": "",
+  "main": "angular-code-prettify.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "color-themes-for-google-code-prettify": "*",
+    "code-prettify": "https://github.com/google/code-prettify.git"
+  },
+  "overrides": {
+    "code-prettify": {
+      "main": [
+        "src/prettify.js",
+        "src/prettify.css"
+      ]
+    },
+    "color-themes-for-google-code-prettify": {
+      "main": [
+        "themes/hemisu-light.css"
+      ]
+    }
+  }
+}
