@@ -1,26 +1,72 @@
-<html ng-app="DemoApp">
+<html ng-app="demo">
 <head>
 	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
+	<!-- The following is injected via Grunt's wiredep task. -->
 	<!-- bower:css -->
-	<link rel="stylesheet" href="bower_components/color-themes-for-google-code-prettify/themes/hemisu-light.css" />
+	<link rel="stylesheet" href="bower_components/color-themes-for-google-code-prettify/dist/themes/tomorrow.css" />
 	<link rel="stylesheet" href="bower_components/code-prettify/src/prettify.css" />
 	<!-- endbower -->
+	<style>
+		pre {
+			margin: 50px 0;
+		}
+		/* Show a number on every line */
+		li.L0, li.L1, li.L2, li.L3,
+		li.L5, li.L6, li.L7, li.L8 {
+		  list-style-type: decimal !important;
+		}
+	</style>
 </head>
 <body>
+	<div class="container">
 
-	<pre class="prettyprint">
-		var foo = 10;
-		console.log(foo); // output: 10
-	</pre><!-- .prettyprint -->
+<h2>Examples</h2>
 
+<pre class="prettyprint">
+// Say hello world until the user starts questioning
+// the meaningfulness of their existence.
+function helloWorld(world) {
+  for (var i = 42; --i >= 0;) {
+    alert('Hello ' + String(world));
+  }
+}
+</pre>
+<pre class="prettyprint">
+p { color: pink }
+b { color: blue }
+u { color: "umber" }
+</pre>
+
+<h3>Line numbers</h3>
+<pre class="prettyprint linenums">
+var foo = 10;
+console.log(foo); // output: 10
+</pre>
+
+<h3>Offset line numbers</h3>
+<pre class="prettyprint linenums:4"
+>// This is line 4.
+foo();
+bar();
+baz();
+boo();
+far();
+faz();
+</pre>
+
+	</div>
+
+	<!-- The following is injected via Grunt's wiredep task: -->
 	<!-- bower:js -->
 	<script src="bower_components/angular/angular.js"></script>
 	<script src="bower_components/code-prettify/src/prettify.js"></script>
 	<!-- endbower -->
-	<script src="angular-code-prettify.js"></script>
 
+	<script src="angular-code-prettify.js"></script>
 	<script>
-		angular.module('DemoApp', ['sko.prettify']);
+		angular.module('demo', ['sko.prettify']);
 	</script>
 </body>
 </html>

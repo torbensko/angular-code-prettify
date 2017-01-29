@@ -20,17 +20,6 @@ module.exports = function(grunt) {
         tasks: ['wiredep']
       },
     },
-    sass: {
-      options: {
-        outputStyle: 'nested',
-        includePaths: ['./bower_components'],
-      },
-      dev: {
-        files: {
-          'styles/main.css': 'scss/main.scss'
-        }
-      },
-    },
     // Inject bower dependencies into the HTML page.
     wiredep: {
       app: {
@@ -44,8 +33,5 @@ module.exports = function(grunt) {
   });
 
   // Default task(s).
-  grunt.registerTask('default', [
-  		'sass:dev',
-      'wiredep',
-  		'watch']);
+  grunt.registerTask('default', ['wiredep', 'watch']);
 };

@@ -1,38 +1,37 @@
 # Code Prettifier
 
-An Angular directive for prettifying your code using the Google Code Prettifier. Includes a collection of themes.
+An Angular directive that prettifies your code samples using the Google Code Prettifier.
+
+Uses [Yoshihide Jimbo](https://jmblog.github.io/color-themes-for-google-code-prettify/) beautiful Google Code themes.
 
 
 ## Usage
 
-- If using `wiredep`, add the following to `bower.json`:
-	```
-  "overrides": {
-    "code-prettify": {
-      "main": [
-        "src/prettify.js",
-        "src/prettify.css"
-      ]
-    },
-    "color-themes-for-google-code-prettify": {
-      "main": [
-        "themes/your-favourite-theme.css"
-      ]
-    }
-  }
-  ```
+See `index.html` for required imports. If you are using `wiredep` Grunt task, you can control which theme is used by adding the following to your `bower.json`:
 
-- Add the module `sko.prittify`.
-- Place your code in `pre` tag:
-	```
-	<pre class="prettyprint">
-		console.log('hello world');
-	</pre>
-	```
+```
+"overrides": {
+  "color-themes-for-google-code-prettify": {
+    "main": [
+      "themes/your-favourite-theme.css"
+    ]
+  }
+}
+```
+
+Add the module `sko.prittify` to your Angular app.
+
+Add the `prettyprint` class to an element:
+
+```
+<pre class="prettyprint">
+  console.log('hello world');
+</pre>
+```
+
+To optionally control the language, add any of the following: `lang-bsh`, `lang-c`, `lang-cc`, `lang-cpp`, `lang-cs`, `lang-csh`, `lang-cyc`, `lang-cv`, `lang-htm`, `lang-html`, `lang-java`, `lang-js`, `lang-m`, `lang-mxml`, `lang-perl`, `lang-pl`, `lang-pm`, `lang-py`, `lang-rb`, `lang-sh`, `lang-xhtml`, `lang-xml`, `lang-xsl`
+
 
 ## Development
 
-- Run a test server:
-	```
-	./run.sh 		# requires Python
-	```
+- Test server: `./run.sh`. Requires Python.

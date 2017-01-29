@@ -14,19 +14,13 @@
   ],
   "dependencies": {
     "angular": "^1.5.8",
-    "color-themes-for-google-code-prettify": "*",
-    "code-prettify": "https://github.com/google/code-prettify.git"
+    "color-themes-for-google-code-prettify": "jmblog/color-themes-for-google-code-prettify",
+    "code-prettify": "*"
   },
   "overrides": {
-    "code-prettify": {
-      "main": [
-        "src/prettify.js",
-        "src/prettify.css"
-      ]
-    },
     "color-themes-for-google-code-prettify": {
       "main": [
-        "themes/hemisu-light.css"
+        "dist/themes/tomorrow.css"
       ]
     }
   }
